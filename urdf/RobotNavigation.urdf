@@ -1,0 +1,456 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+
+<robot
+  name="RobotNavigation">
+
+    <!--BASE FOOTPRINT-->
+   <link name="base_footprint"/>
+    <!-- Joints -->
+    <joint name="base_joint" type="fixed">
+        <parent link="base_footprint"/>
+        <child link="base_link"/>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+    </joint>
+
+  <!--BASE FOOT LINK-->
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-0.0122298186976324 -0.00228091487250581 0.072478022649381"
+        rpy="0 0 0" />
+      <mass
+        value="6.34120339815648" />
+      <inertia
+        ixx="0.161480896656356"
+        ixy="-2.03531032003175E-06"
+        ixz="0.00432129131306015"
+        iyy="0.134888650500343"
+        iyz="-3.73317073039575E-07"
+        izz="0.288909658727394" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mobilerobot_toxic/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mobilerobot_toxic/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+
+  <!--WHEEL FRONT LEFT LINK-->
+  <link
+    name="wheel_fl_link">
+    <inertial>
+      <origin
+        xyz="1.22334337104846E-09 8.86957896018004E-10 0.0273183733527635"
+        rpy="0 0 0" />
+      <mass
+        value="0.260406639700843" />
+      <inertia
+        ixx="7.79587558483255E-05"
+        ixy="-1.08121108739051E-18"
+        ixz="1.32308303025648E-12"
+        iyy="7.79587558483245E-05"
+        iyz="9.59270210938917E-13"
+        izz="0.000107504445834414" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mobilerobot_toxic/meshes/wheel_fl_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mobilerobot_toxic/meshes/wheel_fl_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+
+  <!--WHEEL FRONT LEFT JOINT-->
+  <joint
+    name="wheel_fl_joint"
+    type="continuous">
+    <origin
+      xyz="0.195 0.27189 0.045132"
+      rpy="1.5708 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="wheel_fl_link" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+
+  <!--WHEEL BACK LEFT LINK-->
+  <link
+    name="wheel_bl_link">
+    <inertial>
+      <origin
+        xyz="-2.78244094431557E-12 6.41799391409847E-10 0.0293183733545719"
+        rpy="0 0 0" />
+      <mass
+        value="0.260406639703568" />
+      <inertia
+        ixx="7.79587558525385E-05"
+        ixy="-2.08446867385403E-18"
+        ixz="-2.80289868188565E-15"
+        iyy="7.79587558525421E-05"
+        iyz="6.46772299404645E-13"
+        izz="0.000107504445832076" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mobilerobot_toxic/meshes/wheel_bl_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mobilerobot_toxic/meshes/wheel_bl_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+
+  <!--WHEEL BACK LEFT JOINT-->
+  <joint
+    name="wheel_bl_joint"
+    type="continuous">
+    <origin
+      xyz="-0.195 0.27089 0.045132"
+      rpy="1.5708 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="wheel_bl_link" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+
+  <!--WHEEL FRONT RIGHT LINK-->
+  <link
+    name="wheel_fr_link">
+    <inertial>
+      <origin
+        xyz="-1.31290478488921E-09 3.31705274358995E-10 0.0293183733545925"
+        rpy="0 0 0" />
+      <mass
+        value="0.260406639703581" />
+      <inertia
+        ixx="7.79587558525812E-05"
+        ixy="1.55909648831955E-18"
+        ixz="-1.32308374973537E-12"
+        iyy="7.79587558525745E-05"
+        iyz="3.34279937769356E-13"
+        izz="0.000107504445832069" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mobilerobot_toxic/meshes/wheel_fr_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mobilerobot_toxic/meshes/wheel_fr_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+
+  <!--WHEEL FRONT RIGHT JOINT-->
+  <joint
+    name="wheel_fr_joint"
+    type="continuous">
+    <origin
+      xyz="0.195 -0.27389 0.045132"
+      rpy="-1.5708 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="wheel_fr_link" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+
+  <!--WHEEL BACK RIGHT LINK-->
+  <link
+    name="wheel_br_link">
+    <inertial>
+      <origin
+        xyz="-1.22058607665565E-09 3.09077652360656E-10 0.0273183733644408"
+        rpy="0 0 0" />
+      <mass
+        value="0.260406639690267" />
+      <inertia
+        ixx="7.79587558549098E-05"
+        ixy="3.37489689921635E-20"
+        ixz="-1.32009863679512E-12"
+        iyy="7.79587558549131E-05"
+        iyz="3.3428414476243E-13"
+        izz="0.00010750444582293" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mobilerobot_toxic/meshes/wheel_br_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mobilerobot_toxic/meshes/wheel_br_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+
+  <!--WHEEL BACK RIGHT JOINT-->
+  <joint
+    name="wheel_br_joint"
+    type="continuous">
+    <origin
+      xyz="-0.195 -0.27189 0.045132"
+      rpy="-1.5708 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="wheel_br_link" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+
+  <!--LASER FRAME LINK-->
+  <link
+    name="laser_frame">
+    <inertial>
+      <origin
+        xyz="-2.66584034529505E-05 -2.93114547278428E-06 0.0116477826878597"
+        rpy="0 0 0" />
+      <mass
+        value="0.140284656995364" />
+      <inertia
+        ixx="5.95484493401966E-05"
+        ixy="-1.80580793428134E-08"
+        ixz="-5.77667506135279E-08"
+        iyy="5.97106990994016E-05"
+        iyz="-6.35160395532651E-09"
+        izz="9.06552376956051E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mobilerobot_toxic/meshes/lidar_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mobilerobot_toxic/meshes/lidar_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+
+  <!--LIDAR JOINT-->
+  <joint
+    name="lidar_joint"
+    type="fixed">
+    <origin
+      xyz="0.13308 0 0.16241"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="laser_frame" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+
+  <!--IMU LINK-->
+  <link
+    name="imu_link">
+    <inertial>
+      <origin
+        xyz="-0.000129943343717187 -2.51720885602325E-06 0.0088579030482453"
+        rpy="0 0 0" />
+      <mass
+        value="0.0226368704570406" />
+      <inertia
+        ixx="3.1750561100676E-06"
+        ixy="1.45446012311822E-08"
+        ixz="-1.04661448079234E-08"
+        iyy="2.42451652455916E-06"
+        iyz="-2.02745841011183E-10"
+        izz="4.87894278834858E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mobilerobot_toxic/meshes/imu_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mobilerobot_toxic/meshes/imu_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+
+  <!--IMU JOINT-->
+  <joint
+    name="imu_joint"
+    type="fixed">
+    <origin
+      xyz="0 0 0.015"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="imu_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+
+  <!--
+  <link
+    name="camera_link">
+    <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.05" />
+      <inertia
+        ixx="1e-6" ixy="0" ixz="0"
+        iyy="1e-6" iyz="0"
+        izz="1e-6" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mobilerobot_toxic/meshes/camera_sensor.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.1 0.1 0.1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mobilerobot_toxic/meshes/camera_sensor.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="camera_joint"
+    type="fixed">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="camera_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  -->
+</robot>
+
+

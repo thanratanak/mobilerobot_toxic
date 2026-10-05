@@ -1,0 +1,117 @@
+Panels:
+  - Class: rviz_common/Displays
+    Name: Displays
+    Property Tree Widget:
+      Expanded:
+        - /Global Options1
+        - /RobotModel1
+        - /Map1
+        - /Global Costmap1
+        - /Local Costmap1
+        - /Global Plan1
+        - /LaserScan1
+    Splitter Ratio: 0.5
+  - Class: rviz_common/Selection
+    Name: Selection
+  - Class: rviz_common/Tool Properties
+    Name: Tool Properties
+  - Class: rviz_common/Views
+    Name: Views
+Visualization Manager:
+  Class: ""
+  Displays:
+    - Class: rviz_default_plugins/Grid
+      Name: Grid
+      Enabled: true
+      Alpha: 0.5
+      Cell Size: 1
+      Plane: XY
+      Plane Cell Count: 20
+      Reference Frame: <Fixed Frame>
+    - Class: rviz_default_plugins/Map
+      Name: Map
+      Enabled: true
+      Topic: /map
+      Alpha: 0.7
+      Color Scheme: map
+      Draw Behind: true
+    - Class: rviz_default_plugins/Map
+      Name: Global Costmap
+      Enabled: true
+      Topic: /global_costmap/costmap
+      Alpha: 0.4
+      Color Scheme: costmap
+      Draw Behind: false
+    - Class: rviz_default_plugins/Map
+      Name: Local Costmap
+      Enabled: true
+      Topic: /local_costmap/costmap
+      Alpha: 0.5
+      Color Scheme: costmap
+      Draw Behind: false
+    - Class: rviz_default_plugins/Path
+      Name: Global Plan
+      Enabled: true
+      Topic: /plan
+      Color: 0; 255; 0
+      Line Width: 0.04
+    - Class: rviz_default_plugins/Path
+      Name: Local Plan
+      Enabled: true
+      Topic: /local_plan
+      Color: 255; 165; 0
+      Line Width: 0.03
+    - Class: rviz_default_plugins/RobotModel
+      Name: RobotModel
+      Enabled: true
+      Description Source: Topic
+      Description Topic:
+        Value: /robot_description
+      Visual Enabled: true
+      Collision Enabled: false
+    - Class: rviz_default_plugins/TF
+      Name: TF
+      Enabled: false
+      Show Axes: true
+      Show Names: false
+      Marker Scale: 0.4
+    - Class: rviz_default_plugins/LaserScan
+      Name: LaserScan
+      Enabled: true
+      Topic: /scan
+      Size (m): 0.05
+      Style: Flat Squares
+      Color Transformer: FlatColor
+      Color: 255; 0; 0
+      Use Fixed Frame: true
+    - Class: rviz_default_plugins/PoseArray
+      Name: AMCL Particles
+      Enabled: true
+      Topic: /particlecloud
+      Shape: Arrow (Flat)
+      Arrow Length: 0.15
+  Global Options:
+    Fixed Frame: map
+    Frame Rate: 30
+  Tools:
+    - Class: rviz_default_plugins/Interact
+    - Class: rviz_default_plugins/MoveCamera
+    - Class: rviz_default_plugins/Select
+    - Class: rviz_default_plugins/FocusCamera
+    - Class: rviz_default_plugins/SetInitialPose
+      Topic:
+        Value: /initialpose
+    - Class: rviz_default_plugins/SetGoal
+      Topic:
+        Value: /goal_pose
+  Views:
+    Current:
+      Class: rviz_default_plugins/Orbit
+      Target Frame: base_footprint
+      Distance: 6
+      Focal Point:
+        X: 0
+        Y: 0
+        Z: 0
+      Yaw: 0.785
+      Pitch: 0.5
